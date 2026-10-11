@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEON DASH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-badge">GD</div>
+          <div class="brand-text">
+            <span class="eyebrow">SURVIVAL MODE</span>
+            <h1>NEON DASH</h1>
+          </div>
+        </div>
+        <button id="settingsBtn" class="settings-btn" type="button">Settings</button>
+      </header>
+
+      <aside class="outfits-panel">
+        <div class="panel-header">
+          <span>Outfits</span>
+          <div class="coin-pill">
+            <span class="coin-icon">◉</span>
+            <span id="menuCoins">0</span>
+          </div>
+        </div>
+        <div id="skinList" class="skin-list"></div>
+      </aside>
+
+      <main class="main-screen" id="menuScreen">
+        <div class="hero-panel">
+          <div class="orb orb-a"></div>
+          <div class="orb orb-b"></div>
+          <div class="play-wrap">
+            <button id="playBtn" class="play-btn" type="button">
+              <span class="play-label">PLAY</span>
+              <span class="play-tag">ELON MUSK</span>
+            </button>
+          </div>
+        </div>
+      </main>
+
+      <section id="levelScreen" class="level-screen hidden">
+        <div class="level-header">
+          <div>
+            <span class="section-tag">LEVEL SELECT</span>
+            <h2>Choose your run</h2>
+          </div>
+          <button id="backToMenu" class="ghost-btn" type="button">Back</button>
+        </div>
+        <div id="levelGrid" class="level-grid"></div>
+      </section>
+
+      <section id="gameScreen" class="game-screen hidden">
+        <div class="hud-row">
+          <div class="hud-box">
+            <span class="hud-label">Coins</span>
+            <strong id="coinCount">0</strong>
+          </div>
+          <div class="hud-box">
+            <span class="hud-label">Level</span>
+            <strong id="currentLevel">-</strong>
+          </div>
+        </div>
+
+        <div id="gameArea" class="game-area">
+          <div class="sky-grid"></div>
+          <div id="ground" class="ground"></div>
+          <div id="player" class="player"></div>
+        </div>
+
+        <div id="gameOverlay" class="game-overlay hidden">
+          <div class="result-card">
+            <span id="resultTag" class="result-tag">LEVEL COMPLETE</span>
+            <h3 id="resultTitle">Perfect run</h3>
+            <p id="resultText">You earned coins.</p>
+            <button id="overlayBtn" class="play-btn small" type="button">Continue</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="settingsModal" class="modal hidden" aria-hidden="true">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3>Settings</h3>
+          <button id="closeSettings" class="icon-btn" type="button">✕</button>
+        </div>
+
+        <div class="setting-block">
+          <label for="volumeSlider">Audio</label>
+          <div class="range-row">
+            <input id="volumeSlider" type="range" min="0" max="100" value="72" />
+            <span id="volumeValue">72%</span>
+          </div>
+        </div>
+
+        <div class="setting-block">
+          <label for="graphicsSlider">Graphics</label>
+          <div class="range-row">
+            <input id="graphicsSlider" type="range" min="1" max="100" value="78" />
+            <span id="graphicsValue">78%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
